@@ -7,72 +7,545 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16C7AF2CEBCA12C74EA09082 /* libPods-RelayClient-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51487FEE3C77AC20F722529A /* libPods-RelayClient-iOS.a */; };
+		79122C64BA7B6C8F96CDCFF7 /* libPods-Shared-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E2679F56CE108FC770901A3 /* libPods-Shared-iOS.a */; };
+		7F2A3BC4143EBF1C2BA0FD88 /* libPods-RelayServer-macOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A120D93A55A2A496A42BE81 /* libPods-RelayServer-macOS.a */; };
+		890ABFC3A2FFEA31F28E718B /* libPods-Shared-macOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F8045A5A9C850D719A9171B /* libPods-Shared-macOS.a */; settings = {ATTRIBUTES = (Required, ); }; };
+		9C76E9B12234BCF7007DB27D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C76E9B02234BCF7007DB27D /* AppDelegate.m */; };
+		9C76E9B42234BCF7007DB27D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C76E9B32234BCF7007DB27D /* ViewController.m */; };
+		9C76E9B72234BCF7007DB27D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C76E9B52234BCF7007DB27D /* Main.storyboard */; };
+		9C76E9B92234BCF8007DB27D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C76E9B82234BCF8007DB27D /* Assets.xcassets */; };
+		9C76E9BC2234BCF8007DB27D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C76E9BA2234BCF8007DB27D /* LaunchScreen.storyboard */; };
+		9C76E9BF2234BCF8007DB27D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C76E9BE2234BCF8007DB27D /* main.m */; };
+		9C76E9C92234BD11007DB27D /* libRelayClient-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CF96DD522349F0B00CB84B4 /* libRelayClient-iOS.a */; };
+		9CB385C52234BF1A00856E08 /* Peertalk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9CF96DF52234A04500CB84B4 /* Peertalk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9CF96DDA22349F0B00CB84B4 /* Relay.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF96DD922349F0B00CB84B4 /* Relay.m */; };
 		9CF96DDB22349F0B00CB84B4 /* Relay.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9CF96DD822349F0B00CB84B4 /* Relay.h */; };
+		9CF96DF82234A05A00CB84B4 /* Peertalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CF96DF52234A04500CB84B4 /* Peertalk.framework */; };
+		9CF96DFF2234A0BB00CB84B4 /* RelayConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF96DFB2234A0BA00CB84B4 /* RelayConnectionManager.m */; };
+		9CF96E002234A0BB00CB84B4 /* SocketRelayServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF96DFC2234A0BB00CB84B4 /* SocketRelayServer.m */; };
+		9CF96E012234A0BB00CB84B4 /* USBRelayServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF96DFD2234A0BB00CB84B4 /* USBRelayServer.m */; };
+		9CF96E152234A0F900CB84B4 /* USBClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF96E0F2234A0F900CB84B4 /* USBClient.m */; };
+		9CF96E162234A0F900CB84B4 /* RelayProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF96E102234A0F900CB84B4 /* RelayProtocol.m */; };
+		9CF96E172234A0F900CB84B4 /* RelaySocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF96E112234A0F900CB84B4 /* RelaySocket.m */; };
+		9CF96E1A2234A12600CB84B4 /* libShared-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CF96E062234A0E200CB84B4 /* libShared-iOS.a */; };
+		9CF96E1B2234A16200CB84B4 /* RelayProtocol.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9CF96E122234A0F900CB84B4 /* RelayProtocol.h */; };
+		9CF96E1C2234A16200CB84B4 /* RelaySocket.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9CF96E132234A0F900CB84B4 /* RelaySocket.h */; };
+		9CF96E1D2234A16200CB84B4 /* USBClient.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9CF96E142234A0F900CB84B4 /* USBClient.h */; };
+		9CF96E202234A1F400CB84B4 /* Peertalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CF96DF52234A04500CB84B4 /* Peertalk.framework */; };
+		9CF96E3A2234A30200CB84B4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF96E392234A30200CB84B4 /* AppDelegate.m */; };
+		9CF96E3D2234A30200CB84B4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF96E3C2234A30200CB84B4 /* ViewController.m */; };
+		9CF96E3F2234A30200CB84B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CF96E3E2234A30200CB84B4 /* Assets.xcassets */; };
+		9CF96E422234A30200CB84B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CF96E402234A30200CB84B4 /* Main.storyboard */; };
+		9CF96E452234A30200CB84B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF96E442234A30200CB84B4 /* main.m */; };
+		9CF96E502234A30200CB84B4 /* RelayServer_macOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF96E4F2234A30200CB84B4 /* RelayServer_macOSTests.m */; };
+		9CF96E5B2234A30200CB84B4 /* RelayServer_macOSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF96E5A2234A30200CB84B4 /* RelayServer_macOSUITests.m */; };
+		9CF96E752234A34A00CB84B4 /* USBClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CF96E142234A0F900CB84B4 /* USBClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9CF96E762234A34C00CB84B4 /* RelaySocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CF96E132234A0F900CB84B4 /* RelaySocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9CF96E772234A34E00CB84B4 /* RelayProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CF96E122234A0F900CB84B4 /* RelayProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9CF96E782234A35600CB84B4 /* RelayProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF96E102234A0F900CB84B4 /* RelayProtocol.m */; };
+		9CF96E792234A35700CB84B4 /* RelaySocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF96E112234A0F900CB84B4 /* RelaySocket.m */; };
+		9CF96E7A2234A35900CB84B4 /* USBClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF96E0F2234A0F900CB84B4 /* USBClient.m */; };
+		9CF96E7D2234A37D00CB84B4 /* Peertalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CF96DF32234A04500CB84B4 /* Peertalk.framework */; };
+		9CF96E872234A3D600CB84B4 /* USBClientManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF96E7F2234A3D500CB84B4 /* USBClientManager.m */; };
+		9CF96E882234A3D600CB84B4 /* RelayUSBClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF96E862234A3D600CB84B4 /* RelayUSBClient.m */; };
+		9CF96E8B2234A40400CB84B4 /* libShared-macOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CF96E6C2234A33300CB84B4 /* libShared-macOS.a */; };
+		9CF96F792234A74700CB84B4 /* RelayConnectionManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9CF96DFA2234A0BA00CB84B4 /* RelayConnectionManager.h */; };
+		E7074A1D4D015EE7A02204C6 /* libPods-ExampleRelayClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 019A85C46DC4E79FD5190274 /* libPods-ExampleRelayClient.a */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		9C76E9C72234BD0B007DB27D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9CF96DCD22349F0B00CB84B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9CF96DD422349F0B00CB84B4;
+			remoteInfo = "RelayClient-iOS";
+		};
+		9CB385C12234BEF200856E08 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9CF96DE12234A04500CB84B4 /* peertalk.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = EE158A671CBD3ED700A3E3F0;
+			remoteInfo = "Peertalk iOS";
+		};
+		9CB385C62234BF1A00856E08 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9CF96DE12234A04500CB84B4 /* peertalk.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = EE158A671CBD3ED700A3E3F0;
+			remoteInfo = "Peertalk iOS";
+		};
+		9CF96DEA2234A04500CB84B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9CF96DE12234A04500CB84B4 /* peertalk.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6A88FA30150D613800FC3647;
+			remoteInfo = peertalk;
+		};
+		9CF96DEC2234A04500CB84B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9CF96DE12234A04500CB84B4 /* peertalk.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6A88FA44150D613800FC3647;
+			remoteInfo = peertalkTests;
+		};
+		9CF96DEE2234A04500CB84B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9CF96DE12234A04500CB84B4 /* peertalk.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6A64AAC6152604D40065BF86;
+			remoteInfo = "Peertalk Example";
+		};
+		9CF96DF02234A04500CB84B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9CF96DE12234A04500CB84B4 /* peertalk.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6A64AAE21526050D0065BF86;
+			remoteInfo = "Peertalk iOS Example";
+		};
+		9CF96DF22234A04500CB84B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9CF96DE12234A04500CB84B4 /* peertalk.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE158A5B1CBD3EB600A3E3F0;
+			remoteInfo = Peertalk;
+		};
+		9CF96DF42234A04500CB84B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9CF96DE12234A04500CB84B4 /* peertalk.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE158A681CBD3ED700A3E3F0;
+			remoteInfo = "Peertalk iOS";
+		};
+		9CF96DF62234A04E00CB84B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9CF96DE12234A04500CB84B4 /* peertalk.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = EE158A671CBD3ED700A3E3F0;
+			remoteInfo = "Peertalk iOS";
+		};
+		9CF96E182234A12200CB84B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9CF96DCD22349F0B00CB84B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9CF96E052234A0E200CB84B4;
+			remoteInfo = "Shared-iOS";
+		};
+		9CF96E1E2234A1EC00CB84B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9CF96DE12234A04500CB84B4 /* peertalk.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = EE158A671CBD3ED700A3E3F0;
+			remoteInfo = "Peertalk iOS";
+		};
+		9CF96E4C2234A30200CB84B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9CF96DCD22349F0B00CB84B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9CF96E352234A30200CB84B4;
+			remoteInfo = "RelayServer-macOS";
+		};
+		9CF96E572234A30200CB84B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9CF96DCD22349F0B00CB84B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9CF96E352234A30200CB84B4;
+			remoteInfo = "RelayServer-macOS";
+		};
+		9CF96E662234A31700CB84B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9CF96DE12234A04500CB84B4 /* peertalk.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = EE158A5A1CBD3EB600A3E3F0;
+			remoteInfo = Peertalk;
+		};
+		9CF96E7B2234A36500CB84B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9CF96DE12234A04500CB84B4 /* peertalk.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = EE158A5A1CBD3EB600A3E3F0;
+			remoteInfo = Peertalk;
+		};
+		9CF96E892234A40000CB84B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9CF96DCD22349F0B00CB84B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9CF96E6B2234A33300CB84B4;
+			remoteInfo = "Shared-macOS";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
+		9CB385C82234BF1B00856E08 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9CB385C52234BF1A00856E08 /* Peertalk.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9CF96DD322349F0B00CB84B4 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				9CF96F792234A74700CB84B4 /* RelayConnectionManager.h in CopyFiles */,
 				9CF96DDB22349F0B00CB84B4 /* Relay.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CF96E042234A0E200CB84B4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				9CF96E1B2234A16200CB84B4 /* RelayProtocol.h in CopyFiles */,
+				9CF96E1C2234A16200CB84B4 /* RelaySocket.h in CopyFiles */,
+				9CF96E1D2234A16200CB84B4 /* USBClient.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9CF96DD522349F0B00CB84B4 /* libRelay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRelay.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		019A85C46DC4E79FD5190274 /* libPods-ExampleRelayClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ExampleRelayClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0549151318EB5F1EA7B7FCBD /* Pods-RelayServer-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RelayServer-macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RelayServer-macOS/Pods-RelayServer-macOS.debug.xcconfig"; sourceTree = "<group>"; };
+		0F8045A5A9C850D719A9171B /* libPods-Shared-macOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Shared-macOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		10989BDB352A112598932C45 /* Pods-RelayClient-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RelayClient-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-RelayClient-iOS/Pods-RelayClient-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		15B9ABB20BD4E40D961B9773 /* Pods-ExampleRelayClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleRelayClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ExampleRelayClient/Pods-ExampleRelayClient.debug.xcconfig"; sourceTree = "<group>"; };
+		51487FEE3C77AC20F722529A /* libPods-RelayClient-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RelayClient-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5300C9D8D61CB0255D2B3C47 /* libPods-Relay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Relay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E2679F56CE108FC770901A3 /* libPods-Shared-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Shared-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		737853A9B902688E07717487 /* Pods-Relay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Relay.release.xcconfig"; path = "Pods/Target Support Files/Pods-Relay/Pods-Relay.release.xcconfig"; sourceTree = "<group>"; };
+		7E16F604AD4319B1937400E5 /* Pods-Shared-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shared-iOS/Pods-Shared-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		84EAEFAE04C198102849D5CF /* Pods-RelayClient-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RelayClient-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RelayClient-iOS/Pods-RelayClient-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		9482910EA0A5AA6222794906 /* Pods-Relay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Relay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Relay/Pods-Relay.debug.xcconfig"; sourceTree = "<group>"; };
+		9A120D93A55A2A496A42BE81 /* libPods-RelayServer-macOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RelayServer-macOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C76E9AD2234BCF7007DB27D /* ExampleRelayClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleRelayClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C76E9AF2234BCF7007DB27D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9C76E9B02234BCF7007DB27D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9C76E9B22234BCF7007DB27D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9C76E9B32234BCF7007DB27D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9C76E9B62234BCF7007DB27D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9C76E9B82234BCF8007DB27D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9C76E9BB2234BCF8007DB27D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9C76E9BD2234BCF8007DB27D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C76E9BE2234BCF8007DB27D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9CF96DD522349F0B00CB84B4 /* libRelayClient-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libRelayClient-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CF96DD822349F0B00CB84B4 /* Relay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Relay.h; sourceTree = "<group>"; };
 		9CF96DD922349F0B00CB84B4 /* Relay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Relay.m; sourceTree = "<group>"; };
+		9CF96DE12234A04500CB84B4 /* peertalk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = peertalk.xcodeproj; path = peertalk/peertalk.xcodeproj; sourceTree = "<group>"; };
+		9CF96DF92234A0BA00CB84B4 /* SocketRelayServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketRelayServer.h; sourceTree = "<group>"; };
+		9CF96DFA2234A0BA00CB84B4 /* RelayConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RelayConnectionManager.h; sourceTree = "<group>"; };
+		9CF96DFB2234A0BA00CB84B4 /* RelayConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RelayConnectionManager.m; sourceTree = "<group>"; };
+		9CF96DFC2234A0BB00CB84B4 /* SocketRelayServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketRelayServer.m; sourceTree = "<group>"; };
+		9CF96DFD2234A0BB00CB84B4 /* USBRelayServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USBRelayServer.m; sourceTree = "<group>"; };
+		9CF96DFE2234A0BB00CB84B4 /* USBRelayServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USBRelayServer.h; sourceTree = "<group>"; };
+		9CF96E062234A0E200CB84B4 /* libShared-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libShared-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CF96E0F2234A0F900CB84B4 /* USBClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USBClient.m; sourceTree = "<group>"; };
+		9CF96E102234A0F900CB84B4 /* RelayProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RelayProtocol.m; sourceTree = "<group>"; };
+		9CF96E112234A0F900CB84B4 /* RelaySocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RelaySocket.m; sourceTree = "<group>"; };
+		9CF96E122234A0F900CB84B4 /* RelayProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RelayProtocol.h; sourceTree = "<group>"; };
+		9CF96E132234A0F900CB84B4 /* RelaySocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RelaySocket.h; sourceTree = "<group>"; };
+		9CF96E142234A0F900CB84B4 /* USBClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USBClient.h; sourceTree = "<group>"; };
+		9CF96E362234A30200CB84B4 /* RelayServer-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RelayServer-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CF96E382234A30200CB84B4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9CF96E392234A30200CB84B4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9CF96E3B2234A30200CB84B4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9CF96E3C2234A30200CB84B4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9CF96E3E2234A30200CB84B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9CF96E412234A30200CB84B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9CF96E432234A30200CB84B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CF96E442234A30200CB84B4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9CF96E462234A30200CB84B4 /* RelayServer_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RelayServer_macOS.entitlements; sourceTree = "<group>"; };
+		9CF96E4B2234A30200CB84B4 /* RelayServer-macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RelayServer-macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CF96E4F2234A30200CB84B4 /* RelayServer_macOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RelayServer_macOSTests.m; sourceTree = "<group>"; };
+		9CF96E512234A30200CB84B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CF96E562234A30200CB84B4 /* RelayServer-macOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RelayServer-macOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CF96E5A2234A30200CB84B4 /* RelayServer_macOSUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RelayServer_macOSUITests.m; sourceTree = "<group>"; };
+		9CF96E5C2234A30200CB84B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CF96E6C2234A33300CB84B4 /* libShared-macOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libShared-macOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CF96E7F2234A3D500CB84B4 /* USBClientManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USBClientManager.m; sourceTree = "<group>"; };
+		9CF96E842234A3D500CB84B4 /* RelayUSBClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RelayUSBClient.h; sourceTree = "<group>"; };
+		9CF96E852234A3D500CB84B4 /* USBClientManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USBClientManager.h; sourceTree = "<group>"; };
+		9CF96E862234A3D600CB84B4 /* RelayUSBClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RelayUSBClient.m; sourceTree = "<group>"; };
+		A3B87FB810B3C8825150E677 /* Pods-Shared-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shared-iOS/Pods-Shared-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		A41E7FAAC1E11259E5C13130 /* Pods-RelayServer-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RelayServer-macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-RelayServer-macOS/Pods-RelayServer-macOS.release.xcconfig"; sourceTree = "<group>"; };
+		C6166B2F773936ACCBA7701F /* Pods-ExampleRelayClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleRelayClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExampleRelayClient/Pods-ExampleRelayClient.release.xcconfig"; sourceTree = "<group>"; };
+		D33268D13CF78B224C3D0E9F /* Pods-Shared-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared-macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shared-macOS/Pods-Shared-macOS.debug.xcconfig"; sourceTree = "<group>"; };
+		D412D9237BB0650ECB66F777 /* Pods-Shared-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared-macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shared-macOS/Pods-Shared-macOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9C76E9AA2234BCF7007DB27D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C76E9C92234BD11007DB27D /* libRelayClient-iOS.a in Frameworks */,
+				E7074A1D4D015EE7A02204C6 /* libPods-ExampleRelayClient.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9CF96DD222349F0B00CB84B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CF96E1A2234A12600CB84B4 /* libShared-iOS.a in Frameworks */,
+				9CF96DF82234A05A00CB84B4 /* Peertalk.framework in Frameworks */,
+				16C7AF2CEBCA12C74EA09082 /* libPods-RelayClient-iOS.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CF96E032234A0E200CB84B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CF96E202234A1F400CB84B4 /* Peertalk.framework in Frameworks */,
+				79122C64BA7B6C8F96CDCFF7 /* libPods-Shared-iOS.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CF96E332234A30200CB84B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CF96E8B2234A40400CB84B4 /* libShared-macOS.a in Frameworks */,
+				7F2A3BC4143EBF1C2BA0FD88 /* libPods-RelayServer-macOS.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CF96E482234A30200CB84B4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9CF96E532234A30200CB84B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CF96E6A2234A33300CB84B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CF96E7D2234A37D00CB84B4 /* Peertalk.framework in Frameworks */,
+				890ABFC3A2FFEA31F28E718B /* libPods-Shared-macOS.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		505CC2416BBC55A0B1AC851A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5300C9D8D61CB0255D2B3C47 /* libPods-Relay.a */,
+				51487FEE3C77AC20F722529A /* libPods-RelayClient-iOS.a */,
+				5E2679F56CE108FC770901A3 /* libPods-Shared-iOS.a */,
+				0F8045A5A9C850D719A9171B /* libPods-Shared-macOS.a */,
+				9A120D93A55A2A496A42BE81 /* libPods-RelayServer-macOS.a */,
+				019A85C46DC4E79FD5190274 /* libPods-ExampleRelayClient.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9C76E9AE2234BCF7007DB27D /* ExampleRelayClient */ = {
+			isa = PBXGroup;
+			children = (
+				9C76E9AF2234BCF7007DB27D /* AppDelegate.h */,
+				9C76E9B02234BCF7007DB27D /* AppDelegate.m */,
+				9C76E9B22234BCF7007DB27D /* ViewController.h */,
+				9C76E9B32234BCF7007DB27D /* ViewController.m */,
+				9C76E9B52234BCF7007DB27D /* Main.storyboard */,
+				9C76E9B82234BCF8007DB27D /* Assets.xcassets */,
+				9C76E9BA2234BCF8007DB27D /* LaunchScreen.storyboard */,
+				9C76E9BD2234BCF8007DB27D /* Info.plist */,
+				9C76E9BE2234BCF8007DB27D /* main.m */,
+			);
+			path = ExampleRelayClient;
+			sourceTree = "<group>";
+		};
 		9CF96DCC22349F0B00CB84B4 = {
 			isa = PBXGroup;
 			children = (
-				9CF96DD722349F0B00CB84B4 /* Relay */,
+				9CF96DE12234A04500CB84B4 /* peertalk.xcodeproj */,
+				9CF96DD722349F0B00CB84B4 /* RelayClient-iOS */,
+				9CF96E072234A0E200CB84B4 /* Shared */,
+				9CF96E372234A30200CB84B4 /* RelayServer-macOS */,
+				9CF96E4E2234A30200CB84B4 /* RelayServer-macOSTests */,
+				9CF96E592234A30200CB84B4 /* RelayServer-macOSUITests */,
+				9C76E9AE2234BCF7007DB27D /* ExampleRelayClient */,
 				9CF96DD622349F0B00CB84B4 /* Products */,
+				DE67CC53B176D4F0444BFA63 /* Pods */,
+				505CC2416BBC55A0B1AC851A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		9CF96DD622349F0B00CB84B4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9CF96DD522349F0B00CB84B4 /* libRelay.a */,
+				9CF96DD522349F0B00CB84B4 /* libRelayClient-iOS.a */,
+				9CF96E062234A0E200CB84B4 /* libShared-iOS.a */,
+				9CF96E362234A30200CB84B4 /* RelayServer-macOS.app */,
+				9CF96E4B2234A30200CB84B4 /* RelayServer-macOSTests.xctest */,
+				9CF96E562234A30200CB84B4 /* RelayServer-macOSUITests.xctest */,
+				9CF96E6C2234A33300CB84B4 /* libShared-macOS.a */,
+				9C76E9AD2234BCF7007DB27D /* ExampleRelayClient.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9CF96DD722349F0B00CB84B4 /* Relay */ = {
+		9CF96DD722349F0B00CB84B4 /* RelayClient-iOS */ = {
 			isa = PBXGroup;
 			children = (
 				9CF96DD822349F0B00CB84B4 /* Relay.h */,
 				9CF96DD922349F0B00CB84B4 /* Relay.m */,
+				9CF96DFA2234A0BA00CB84B4 /* RelayConnectionManager.h */,
+				9CF96DFB2234A0BA00CB84B4 /* RelayConnectionManager.m */,
+				9CF96DF92234A0BA00CB84B4 /* SocketRelayServer.h */,
+				9CF96DFC2234A0BB00CB84B4 /* SocketRelayServer.m */,
+				9CF96DFE2234A0BB00CB84B4 /* USBRelayServer.h */,
+				9CF96DFD2234A0BB00CB84B4 /* USBRelayServer.m */,
 			);
-			path = Relay;
+			path = "RelayClient-iOS";
+			sourceTree = "<group>";
+		};
+		9CF96DE22234A04500CB84B4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9CF96DEB2234A04500CB84B4 /* libpeertalk.a */,
+				9CF96DED2234A04500CB84B4 /* peertalkTests.xctest */,
+				9CF96DEF2234A04500CB84B4 /* Peertalk Example.app */,
+				9CF96DF12234A04500CB84B4 /* Peertalk iOS Example.app */,
+				9CF96DF32234A04500CB84B4 /* Peertalk.framework */,
+				9CF96DF52234A04500CB84B4 /* Peertalk.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9CF96E072234A0E200CB84B4 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				9CF96E122234A0F900CB84B4 /* RelayProtocol.h */,
+				9CF96E102234A0F900CB84B4 /* RelayProtocol.m */,
+				9CF96E132234A0F900CB84B4 /* RelaySocket.h */,
+				9CF96E112234A0F900CB84B4 /* RelaySocket.m */,
+				9CF96E142234A0F900CB84B4 /* USBClient.h */,
+				9CF96E0F2234A0F900CB84B4 /* USBClient.m */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		9CF96E372234A30200CB84B4 /* RelayServer-macOS */ = {
+			isa = PBXGroup;
+			children = (
+				9CF96E842234A3D500CB84B4 /* RelayUSBClient.h */,
+				9CF96E862234A3D600CB84B4 /* RelayUSBClient.m */,
+				9CF96E852234A3D500CB84B4 /* USBClientManager.h */,
+				9CF96E7F2234A3D500CB84B4 /* USBClientManager.m */,
+				9CF96E382234A30200CB84B4 /* AppDelegate.h */,
+				9CF96E392234A30200CB84B4 /* AppDelegate.m */,
+				9CF96E3B2234A30200CB84B4 /* ViewController.h */,
+				9CF96E3C2234A30200CB84B4 /* ViewController.m */,
+				9CF96E3E2234A30200CB84B4 /* Assets.xcassets */,
+				9CF96E402234A30200CB84B4 /* Main.storyboard */,
+				9CF96E432234A30200CB84B4 /* Info.plist */,
+				9CF96E442234A30200CB84B4 /* main.m */,
+				9CF96E462234A30200CB84B4 /* RelayServer_macOS.entitlements */,
+			);
+			path = "RelayServer-macOS";
+			sourceTree = "<group>";
+		};
+		9CF96E4E2234A30200CB84B4 /* RelayServer-macOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				9CF96E4F2234A30200CB84B4 /* RelayServer_macOSTests.m */,
+				9CF96E512234A30200CB84B4 /* Info.plist */,
+			);
+			path = "RelayServer-macOSTests";
+			sourceTree = "<group>";
+		};
+		9CF96E592234A30200CB84B4 /* RelayServer-macOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9CF96E5A2234A30200CB84B4 /* RelayServer_macOSUITests.m */,
+				9CF96E5C2234A30200CB84B4 /* Info.plist */,
+			);
+			path = "RelayServer-macOSUITests";
+			sourceTree = "<group>";
+		};
+		DE67CC53B176D4F0444BFA63 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9482910EA0A5AA6222794906 /* Pods-Relay.debug.xcconfig */,
+				737853A9B902688E07717487 /* Pods-Relay.release.xcconfig */,
+				84EAEFAE04C198102849D5CF /* Pods-RelayClient-iOS.debug.xcconfig */,
+				10989BDB352A112598932C45 /* Pods-RelayClient-iOS.release.xcconfig */,
+				A3B87FB810B3C8825150E677 /* Pods-Shared-iOS.debug.xcconfig */,
+				7E16F604AD4319B1937400E5 /* Pods-Shared-iOS.release.xcconfig */,
+				D33268D13CF78B224C3D0E9F /* Pods-Shared-macOS.debug.xcconfig */,
+				D412D9237BB0650ECB66F777 /* Pods-Shared-macOS.release.xcconfig */,
+				0549151318EB5F1EA7B7FCBD /* Pods-RelayServer-macOS.debug.xcconfig */,
+				A41E7FAAC1E11259E5C13130 /* Pods-RelayServer-macOS.release.xcconfig */,
+				15B9ABB20BD4E40D961B9773 /* Pods-ExampleRelayClient.debug.xcconfig */,
+				C6166B2F773936ACCBA7701F /* Pods-ExampleRelayClient.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		9CF96E682234A33300CB84B4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CF96E752234A34A00CB84B4 /* USBClient.h in Headers */,
+				9CF96E762234A34C00CB84B4 /* RelaySocket.h in Headers */,
+				9CF96E772234A34E00CB84B4 /* RelayProtocol.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		9CF96DD422349F0B00CB84B4 /* Relay */ = {
+		9C76E9AC2234BCF7007DB27D /* ExampleRelayClient */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9CF96DDE22349F0B00CB84B4 /* Build configuration list for PBXNativeTarget "Relay" */;
+			buildConfigurationList = 9C76E9C62234BCF8007DB27D /* Build configuration list for PBXNativeTarget "ExampleRelayClient" */;
 			buildPhases = (
+				390DCD18B4DC0A2E6D859F9B /* [CP] Check Pods Manifest.lock */,
+				9C76E9A92234BCF7007DB27D /* Sources */,
+				9C76E9AA2234BCF7007DB27D /* Frameworks */,
+				9C76E9AB2234BCF7007DB27D /* Resources */,
+				9CB385C82234BF1B00856E08 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9CB385C22234BEF200856E08 /* PBXTargetDependency */,
+				9C76E9C82234BD0B007DB27D /* PBXTargetDependency */,
+				9CB385C72234BF1A00856E08 /* PBXTargetDependency */,
+			);
+			name = ExampleRelayClient;
+			productName = ExampleRelayClient;
+			productReference = 9C76E9AD2234BCF7007DB27D /* ExampleRelayClient.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9CF96DD422349F0B00CB84B4 /* RelayClient-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CF96DDE22349F0B00CB84B4 /* Build configuration list for PBXNativeTarget "RelayClient-iOS" */;
+			buildPhases = (
+				A1F5A3A4E38A3044E15AD855 /* [CP] Check Pods Manifest.lock */,
 				9CF96DD122349F0B00CB84B4 /* Sources */,
 				9CF96DD222349F0B00CB84B4 /* Frameworks */,
 				9CF96DD322349F0B00CB84B4 /* CopyFiles */,
@@ -80,10 +553,106 @@
 			buildRules = (
 			);
 			dependencies = (
+				9CF96E192234A12200CB84B4 /* PBXTargetDependency */,
+				9CF96DF72234A04E00CB84B4 /* PBXTargetDependency */,
 			);
-			name = Relay;
+			name = "RelayClient-iOS";
 			productName = Relay;
-			productReference = 9CF96DD522349F0B00CB84B4 /* libRelay.a */;
+			productReference = 9CF96DD522349F0B00CB84B4 /* libRelayClient-iOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		9CF96E052234A0E200CB84B4 /* Shared-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CF96E0C2234A0E200CB84B4 /* Build configuration list for PBXNativeTarget "Shared-iOS" */;
+			buildPhases = (
+				01918200A3D54CE1133024C0 /* [CP] Check Pods Manifest.lock */,
+				9CF96E022234A0E200CB84B4 /* Sources */,
+				9CF96E032234A0E200CB84B4 /* Frameworks */,
+				9CF96E042234A0E200CB84B4 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9CF96E1F2234A1EC00CB84B4 /* PBXTargetDependency */,
+			);
+			name = "Shared-iOS";
+			productName = "Shared-iOS";
+			productReference = 9CF96E062234A0E200CB84B4 /* libShared-iOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		9CF96E352234A30200CB84B4 /* RelayServer-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CF96E5D2234A30200CB84B4 /* Build configuration list for PBXNativeTarget "RelayServer-macOS" */;
+			buildPhases = (
+				2A9F67725C4FE25BCEB47967 /* [CP] Check Pods Manifest.lock */,
+				9CF96E322234A30200CB84B4 /* Sources */,
+				9CF96E332234A30200CB84B4 /* Frameworks */,
+				9CF96E342234A30200CB84B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9CF96E8A2234A40000CB84B4 /* PBXTargetDependency */,
+				9CF96E672234A31700CB84B4 /* PBXTargetDependency */,
+			);
+			name = "RelayServer-macOS";
+			productName = "RelayServer-macOS";
+			productReference = 9CF96E362234A30200CB84B4 /* RelayServer-macOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9CF96E4A2234A30200CB84B4 /* RelayServer-macOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CF96E602234A30200CB84B4 /* Build configuration list for PBXNativeTarget "RelayServer-macOSTests" */;
+			buildPhases = (
+				9CF96E472234A30200CB84B4 /* Sources */,
+				9CF96E482234A30200CB84B4 /* Frameworks */,
+				9CF96E492234A30200CB84B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9CF96E4D2234A30200CB84B4 /* PBXTargetDependency */,
+			);
+			name = "RelayServer-macOSTests";
+			productName = "RelayServer-macOSTests";
+			productReference = 9CF96E4B2234A30200CB84B4 /* RelayServer-macOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9CF96E552234A30200CB84B4 /* RelayServer-macOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CF96E632234A30200CB84B4 /* Build configuration list for PBXNativeTarget "RelayServer-macOSUITests" */;
+			buildPhases = (
+				9CF96E522234A30200CB84B4 /* Sources */,
+				9CF96E532234A30200CB84B4 /* Frameworks */,
+				9CF96E542234A30200CB84B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9CF96E582234A30200CB84B4 /* PBXTargetDependency */,
+			);
+			name = "RelayServer-macOSUITests";
+			productName = "RelayServer-macOSUITests";
+			productReference = 9CF96E562234A30200CB84B4 /* RelayServer-macOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		9CF96E6B2234A33300CB84B4 /* Shared-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CF96E722234A33300CB84B4 /* Build configuration list for PBXNativeTarget "Shared-macOS" */;
+			buildPhases = (
+				E90DD7F67648D09D4455C233 /* [CP] Check Pods Manifest.lock */,
+				9CF96E682234A33300CB84B4 /* Headers */,
+				9CF96E692234A33300CB84B4 /* Sources */,
+				9CF96E6A2234A33300CB84B4 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9CF96E7C2234A36500CB84B4 /* PBXTargetDependency */,
+			);
+			name = "Shared-macOS";
+			productName = "Shared-macOS";
+			productReference = 9CF96E6C2234A33300CB84B4 /* libShared-macOS.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -95,7 +664,32 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Igor Lira";
 				TargetAttributes = {
+					9C76E9AC2234BCF7007DB27D = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					9CF96DD422349F0B00CB84B4 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					9CF96E052234A0E200CB84B4 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					9CF96E352234A30200CB84B4 = {
+						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+					9CF96E4A2234A30200CB84B4 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 9CF96E352234A30200CB84B4;
+					};
+					9CF96E552234A30200CB84B4 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 9CF96E352234A30200CB84B4;
+					};
+					9CF96E6B2234A33300CB84B4 = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
@@ -106,29 +700,420 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 9CF96DCC22349F0B00CB84B4;
 			productRefGroup = 9CF96DD622349F0B00CB84B4 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 9CF96DE22234A04500CB84B4 /* Products */;
+					ProjectRef = 9CF96DE12234A04500CB84B4 /* peertalk.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
-				9CF96DD422349F0B00CB84B4 /* Relay */,
+				9CF96DD422349F0B00CB84B4 /* RelayClient-iOS */,
+				9CF96E052234A0E200CB84B4 /* Shared-iOS */,
+				9CF96E6B2234A33300CB84B4 /* Shared-macOS */,
+				9CF96E352234A30200CB84B4 /* RelayServer-macOS */,
+				9CF96E4A2234A30200CB84B4 /* RelayServer-macOSTests */,
+				9CF96E552234A30200CB84B4 /* RelayServer-macOSUITests */,
+				9C76E9AC2234BCF7007DB27D /* ExampleRelayClient */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		9CF96DEB2234A04500CB84B4 /* libpeertalk.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libpeertalk.a;
+			remoteRef = 9CF96DEA2234A04500CB84B4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9CF96DED2234A04500CB84B4 /* peertalkTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = peertalkTests.xctest;
+			remoteRef = 9CF96DEC2234A04500CB84B4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9CF96DEF2234A04500CB84B4 /* Peertalk Example.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Peertalk Example.app";
+			remoteRef = 9CF96DEE2234A04500CB84B4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9CF96DF12234A04500CB84B4 /* Peertalk iOS Example.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Peertalk iOS Example.app";
+			remoteRef = 9CF96DF02234A04500CB84B4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9CF96DF32234A04500CB84B4 /* Peertalk.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Peertalk.framework;
+			remoteRef = 9CF96DF22234A04500CB84B4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9CF96DF52234A04500CB84B4 /* Peertalk.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Peertalk.framework;
+			remoteRef = 9CF96DF42234A04500CB84B4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9C76E9AB2234BCF7007DB27D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C76E9BC2234BCF8007DB27D /* LaunchScreen.storyboard in Resources */,
+				9C76E9B92234BCF8007DB27D /* Assets.xcassets in Resources */,
+				9C76E9B72234BCF7007DB27D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CF96E342234A30200CB84B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CF96E3F2234A30200CB84B4 /* Assets.xcassets in Resources */,
+				9CF96E422234A30200CB84B4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CF96E492234A30200CB84B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CF96E542234A30200CB84B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01918200A3D54CE1133024C0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Shared-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2A9F67725C4FE25BCEB47967 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RelayServer-macOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		390DCD18B4DC0A2E6D859F9B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ExampleRelayClient-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1F5A3A4E38A3044E15AD855 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RelayClient-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E90DD7F67648D09D4455C233 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Shared-macOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		9C76E9A92234BCF7007DB27D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C76E9B42234BCF7007DB27D /* ViewController.m in Sources */,
+				9C76E9BF2234BCF8007DB27D /* main.m in Sources */,
+				9C76E9B12234BCF7007DB27D /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9CF96DD122349F0B00CB84B4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CF96E002234A0BB00CB84B4 /* SocketRelayServer.m in Sources */,
+				9CF96E012234A0BB00CB84B4 /* USBRelayServer.m in Sources */,
 				9CF96DDA22349F0B00CB84B4 /* Relay.m in Sources */,
+				9CF96DFF2234A0BB00CB84B4 /* RelayConnectionManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CF96E022234A0E200CB84B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CF96E152234A0F900CB84B4 /* USBClient.m in Sources */,
+				9CF96E172234A0F900CB84B4 /* RelaySocket.m in Sources */,
+				9CF96E162234A0F900CB84B4 /* RelayProtocol.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CF96E322234A30200CB84B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CF96E3D2234A30200CB84B4 /* ViewController.m in Sources */,
+				9CF96E872234A3D600CB84B4 /* USBClientManager.m in Sources */,
+				9CF96E882234A3D600CB84B4 /* RelayUSBClient.m in Sources */,
+				9CF96E452234A30200CB84B4 /* main.m in Sources */,
+				9CF96E3A2234A30200CB84B4 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CF96E472234A30200CB84B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CF96E502234A30200CB84B4 /* RelayServer_macOSTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CF96E522234A30200CB84B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CF96E5B2234A30200CB84B4 /* RelayServer_macOSUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CF96E692234A33300CB84B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CF96E782234A35600CB84B4 /* RelayProtocol.m in Sources */,
+				9CF96E792234A35700CB84B4 /* RelaySocket.m in Sources */,
+				9CF96E7A2234A35900CB84B4 /* USBClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		9C76E9C82234BD0B007DB27D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9CF96DD422349F0B00CB84B4 /* RelayClient-iOS */;
+			targetProxy = 9C76E9C72234BD0B007DB27D /* PBXContainerItemProxy */;
+		};
+		9CB385C22234BEF200856E08 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Peertalk iOS";
+			targetProxy = 9CB385C12234BEF200856E08 /* PBXContainerItemProxy */;
+		};
+		9CB385C72234BF1A00856E08 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Peertalk iOS";
+			targetProxy = 9CB385C62234BF1A00856E08 /* PBXContainerItemProxy */;
+		};
+		9CF96DF72234A04E00CB84B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Peertalk iOS";
+			targetProxy = 9CF96DF62234A04E00CB84B4 /* PBXContainerItemProxy */;
+		};
+		9CF96E192234A12200CB84B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9CF96E052234A0E200CB84B4 /* Shared-iOS */;
+			targetProxy = 9CF96E182234A12200CB84B4 /* PBXContainerItemProxy */;
+		};
+		9CF96E1F2234A1EC00CB84B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Peertalk iOS";
+			targetProxy = 9CF96E1E2234A1EC00CB84B4 /* PBXContainerItemProxy */;
+		};
+		9CF96E4D2234A30200CB84B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9CF96E352234A30200CB84B4 /* RelayServer-macOS */;
+			targetProxy = 9CF96E4C2234A30200CB84B4 /* PBXContainerItemProxy */;
+		};
+		9CF96E582234A30200CB84B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9CF96E352234A30200CB84B4 /* RelayServer-macOS */;
+			targetProxy = 9CF96E572234A30200CB84B4 /* PBXContainerItemProxy */;
+		};
+		9CF96E672234A31700CB84B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Peertalk;
+			targetProxy = 9CF96E662234A31700CB84B4 /* PBXContainerItemProxy */;
+		};
+		9CF96E7C2234A36500CB84B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Peertalk;
+			targetProxy = 9CF96E7B2234A36500CB84B4 /* PBXContainerItemProxy */;
+		};
+		9CF96E8A2234A40000CB84B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9CF96E6B2234A33300CB84B4 /* Shared-macOS */;
+			targetProxy = 9CF96E892234A40000CB84B4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9C76E9B52234BCF7007DB27D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C76E9B62234BCF7007DB27D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9C76E9BA2234BCF8007DB27D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C76E9BB2234BCF8007DB27D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		9CF96E402234A30200CB84B4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9CF96E412234A30200CB84B4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		9C76E9C02234BCF8007DB27D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15B9ABB20BD4E40D961B9773 /* Pods-ExampleRelayClient.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PWSUE7WEEC;
+				INFOPLIST_FILE = ExampleRelayClient/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.igorlira.ExampleRelayClient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9C76E9C12234BCF8007DB27D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6166B2F773936ACCBA7701F /* Pods-ExampleRelayClient.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PWSUE7WEEC;
+				INFOPLIST_FILE = ExampleRelayClient/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.igorlira.ExampleRelayClient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		9CF96DDC22349F0B00CB84B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -243,6 +1228,7 @@
 		};
 		9CF96DDF22349F0B00CB84B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84EAEFAE04C198102849D5CF /* Pods-RelayClient-iOS.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PWSUE7WEEC;
@@ -255,6 +1241,7 @@
 		};
 		9CF96DE022349F0B00CB84B4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10989BDB352A112598932C45 /* Pods-RelayClient-iOS.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PWSUE7WEEC;
@@ -265,9 +1252,202 @@
 			};
 			name = Release;
 		};
+		9CF96E0D2234A0E200CB84B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3B87FB810B3C8825150E677 /* Pods-Shared-iOS.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PWSUE7WEEC;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9CF96E0E2234A0E200CB84B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E16F604AD4319B1937400E5 /* Pods-Shared-iOS.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PWSUE7WEEC;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9CF96E5E2234A30200CB84B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0549151318EB5F1EA7B7FCBD /* Pods-RelayServer-macOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = PWSUE7WEEC;
+				INFOPLIST_FILE = "RelayServer-macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.igorlira.RelayServer-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		9CF96E5F2234A30200CB84B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A41E7FAAC1E11259E5C13130 /* Pods-RelayServer-macOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = PWSUE7WEEC;
+				INFOPLIST_FILE = "RelayServer-macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.igorlira.RelayServer-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		9CF96E612234A30200CB84B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = PWSUE7WEEC;
+				INFOPLIST_FILE = "RelayServer-macOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.igorlira.RelayServer-macOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RelayServer-macOS.app/Contents/MacOS/RelayServer-macOS";
+			};
+			name = Debug;
+		};
+		9CF96E622234A30200CB84B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = PWSUE7WEEC;
+				INFOPLIST_FILE = "RelayServer-macOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.igorlira.RelayServer-macOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RelayServer-macOS.app/Contents/MacOS/RelayServer-macOS";
+			};
+			name = Release;
+		};
+		9CF96E642234A30200CB84B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = PWSUE7WEEC;
+				INFOPLIST_FILE = "RelayServer-macOSUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.igorlira.RelayServer-macOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_TARGET_NAME = "RelayServer-macOS";
+			};
+			name = Debug;
+		};
+		9CF96E652234A30200CB84B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = PWSUE7WEEC;
+				INFOPLIST_FILE = "RelayServer-macOSUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.igorlira.RelayServer-macOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_TARGET_NAME = "RelayServer-macOS";
+			};
+			name = Release;
+		};
+		9CF96E732234A33300CB84B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D33268D13CF78B224C3D0E9F /* Pods-Shared-macOS.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PWSUE7WEEC;
+				EXECUTABLE_PREFIX = lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		9CF96E742234A33300CB84B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D412D9237BB0650ECB66F777 /* Pods-Shared-macOS.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PWSUE7WEEC;
+				EXECUTABLE_PREFIX = lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9C76E9C62234BCF8007DB27D /* Build configuration list for PBXNativeTarget "ExampleRelayClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C76E9C02234BCF8007DB27D /* Debug */,
+				9C76E9C12234BCF8007DB27D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9CF96DD022349F0B00CB84B4 /* Build configuration list for PBXProject "Relay" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -277,11 +1457,56 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9CF96DDE22349F0B00CB84B4 /* Build configuration list for PBXNativeTarget "Relay" */ = {
+		9CF96DDE22349F0B00CB84B4 /* Build configuration list for PBXNativeTarget "RelayClient-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9CF96DDF22349F0B00CB84B4 /* Debug */,
 				9CF96DE022349F0B00CB84B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9CF96E0C2234A0E200CB84B4 /* Build configuration list for PBXNativeTarget "Shared-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CF96E0D2234A0E200CB84B4 /* Debug */,
+				9CF96E0E2234A0E200CB84B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9CF96E5D2234A30200CB84B4 /* Build configuration list for PBXNativeTarget "RelayServer-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CF96E5E2234A30200CB84B4 /* Debug */,
+				9CF96E5F2234A30200CB84B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9CF96E602234A30200CB84B4 /* Build configuration list for PBXNativeTarget "RelayServer-macOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CF96E612234A30200CB84B4 /* Debug */,
+				9CF96E622234A30200CB84B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9CF96E632234A30200CB84B4 /* Build configuration list for PBXNativeTarget "RelayServer-macOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CF96E642234A30200CB84B4 /* Debug */,
+				9CF96E652234A30200CB84B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9CF96E722234A33300CB84B4 /* Build configuration list for PBXNativeTarget "Shared-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CF96E732234A33300CB84B4 /* Debug */,
+				9CF96E742234A33300CB84B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
