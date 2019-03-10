@@ -59,4 +59,14 @@
     [self.clients removeObjectsInArray:toRemove];
 }
 
+- (NSUInteger)connectedClientCount {
+    NSUInteger result = 0;
+    for (RelayUSBClient* client in self.clients) {
+        if (client.usbClient.isConnected) {
+            result += 1;
+        }
+    }
+    return result;
+}
+
 @end

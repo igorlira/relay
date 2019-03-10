@@ -237,6 +237,7 @@
 		9C76E9BB2234BCF8007DB27D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C76E9BD2234BCF8007DB27D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C76E9BE2234BCF8007DB27D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9CB386BF2235A99C00856E08 /* NotificationNames.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationNames.h; sourceTree = "<group>"; };
 		9CF96DD522349F0B00CB84B4 /* libRelayClient-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libRelayClient-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CF96DD822349F0B00CB84B4 /* Relay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Relay.h; sourceTree = "<group>"; };
 		9CF96DD922349F0B00CB84B4 /* Relay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Relay.m; sourceTree = "<group>"; };
@@ -462,6 +463,7 @@
 				9CF96E432234A30200CB84B4 /* Info.plist */,
 				9CF96E442234A30200CB84B4 /* main.m */,
 				9CF96E462234A30200CB84B4 /* RelayServer_macOS.entitlements */,
+				9CB386BF2235A99C00856E08 /* NotificationNames.h */,
 			);
 			path = "RelayServer-macOS";
 			sourceTree = "<group>";

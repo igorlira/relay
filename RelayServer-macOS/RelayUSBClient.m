@@ -11,6 +11,7 @@
 #import "RelaySocket.h"
 #import "RelayProtocol.h"
 #import <Peertalk/Peertalk.h>
+#import "NotificationNames.h"
 
 @interface RelayUSBClient ()<USBClientDelegate, RelaySocketDelegate>
 
@@ -73,11 +74,15 @@
 - (void)usbClientDidConnect:(USBClient*)client {
     NSLog(@"[USB] Connected");
     dispatch_resume(self.usbQueue);
+    
+    [NSNotificationCenter.defaultCenter postNotificationName:RLDeviceConnectedNotificationName object:nil];
 }
 
 - (void)usbClient:(USBClient *)usbClient didEndWithError:(NSError *)error {
     NSLog(@"[USB] Disconnected");
     dispatch_suspend(self.usbQueue);
+    
+    [NSNotificationCenter.defaultCenter postNotificationName:RLDeviceDisconnectedNotificationName object:nil];
 }
 
 - (RelaySocket*)connectionWithHandle:(NSNumber*)handle {

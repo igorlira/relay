@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface USBClientManager : NSObject
 
+- (NSUInteger)connectedClientCount;
+
 @end
 
 NS_ASSUME_NONNULL_END

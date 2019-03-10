@@ -8,6 +8,12 @@
 
 #import "ViewController.h"
 
+@interface ViewController () <NSTableViewDataSource>
+
+
+
+@end
+
 @implementation ViewController
 
 - (void)viewDidLoad {
@@ -23,5 +29,12 @@
     // Update the view, if already loaded.
 }
 
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
+    return 2;
+}
+
+- (id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
+    return @"cu";
+}
 
 @end
