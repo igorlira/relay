@@ -70,6 +70,14 @@ After running `pod install`, Add the following lines to your AppDelegate.m:
 
 You can either build the target `RelayServer` directly from the source code, or download a precompiled version [here](https://github.com/igorlira/relay/raw/master/RelayServer-macOS.dmg).
 
+Relay will add an icon to your menu bar indicating if it's connected to a device:
+
+<h3 align="center">
+  <a href="https://github.com/igorlira/relay/blob/master/menu.png">
+    <img src="https://github.com/igorlira/relay/blob/master/menu.png?raw=true" alt="Relay menu">
+  </a>
+</h3>
+
 ## Contributions
 
 All contributions are welcome and appreciated. Thank you!
