@@ -1,0 +1,3 @@
+[submodule "peertalk"]
+	path = peertalk
+	url = git@github.com:rsms/peertalk.git
