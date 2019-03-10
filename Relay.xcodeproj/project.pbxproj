@@ -19,8 +19,6 @@
 		9C76E9BF2234BCF8007DB27D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C76E9BE2234BCF8007DB27D /* main.m */; };
 		9C76E9C92234BD11007DB27D /* libRelayClient-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CF96DD522349F0B00CB84B4 /* libRelayClient-iOS.a */; };
 		9CB385C52234BF1A00856E08 /* Peertalk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9CF96DF52234A04500CB84B4 /* Peertalk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9CF96DDA22349F0B00CB84B4 /* Relay.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF96DD922349F0B00CB84B4 /* Relay.m */; };
-		9CF96DDB22349F0B00CB84B4 /* Relay.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9CF96DD822349F0B00CB84B4 /* Relay.h */; };
 		9CF96DF82234A05A00CB84B4 /* Peertalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CF96DF52234A04500CB84B4 /* Peertalk.framework */; };
 		9CF96DFF2234A0BB00CB84B4 /* RelayConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF96DFB2234A0BA00CB84B4 /* RelayConnectionManager.m */; };
 		9CF96E002234A0BB00CB84B4 /* SocketRelayServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF96DFC2234A0BB00CB84B4 /* SocketRelayServer.m */; };
@@ -34,7 +32,6 @@
 		9CF96E1D2234A16200CB84B4 /* USBClient.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9CF96E142234A0F900CB84B4 /* USBClient.h */; };
 		9CF96E202234A1F400CB84B4 /* Peertalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CF96DF52234A04500CB84B4 /* Peertalk.framework */; };
 		9CF96E3A2234A30200CB84B4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF96E392234A30200CB84B4 /* AppDelegate.m */; };
-		9CF96E3D2234A30200CB84B4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF96E3C2234A30200CB84B4 /* ViewController.m */; };
 		9CF96E3F2234A30200CB84B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CF96E3E2234A30200CB84B4 /* Assets.xcassets */; };
 		9CF96E422234A30200CB84B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CF96E402234A30200CB84B4 /* Main.storyboard */; };
 		9CF96E452234A30200CB84B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF96E442234A30200CB84B4 /* main.m */; };
@@ -195,7 +192,6 @@
 			dstSubfolderSpec = 16;
 			files = (
 				9CF96F792234A74700CB84B4 /* RelayConnectionManager.h in CopyFiles */,
-				9CF96DDB22349F0B00CB84B4 /* Relay.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,8 +235,6 @@
 		9C76E9BE2234BCF8007DB27D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9CB386BF2235A99C00856E08 /* NotificationNames.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationNames.h; sourceTree = "<group>"; };
 		9CF96DD522349F0B00CB84B4 /* libRelayClient-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libRelayClient-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9CF96DD822349F0B00CB84B4 /* Relay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Relay.h; sourceTree = "<group>"; };
-		9CF96DD922349F0B00CB84B4 /* Relay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Relay.m; sourceTree = "<group>"; };
 		9CF96DE12234A04500CB84B4 /* peertalk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = peertalk.xcodeproj; path = peertalk/peertalk.xcodeproj; sourceTree = "<group>"; };
 		9CF96DF92234A0BA00CB84B4 /* SocketRelayServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketRelayServer.h; sourceTree = "<group>"; };
 		9CF96DFA2234A0BA00CB84B4 /* RelayConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RelayConnectionManager.h; sourceTree = "<group>"; };
@@ -258,8 +252,6 @@
 		9CF96E362234A30200CB84B4 /* RelayServer-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RelayServer-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CF96E382234A30200CB84B4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9CF96E392234A30200CB84B4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9CF96E3B2234A30200CB84B4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9CF96E3C2234A30200CB84B4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		9CF96E3E2234A30200CB84B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9CF96E412234A30200CB84B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9CF96E432234A30200CB84B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -409,8 +401,6 @@
 		9CF96DD722349F0B00CB84B4 /* RelayClient-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				9CF96DD822349F0B00CB84B4 /* Relay.h */,
-				9CF96DD922349F0B00CB84B4 /* Relay.m */,
 				9CF96DFA2234A0BA00CB84B4 /* RelayConnectionManager.h */,
 				9CF96DFB2234A0BA00CB84B4 /* RelayConnectionManager.m */,
 				9CF96DF92234A0BA00CB84B4 /* SocketRelayServer.h */,
@@ -456,8 +446,6 @@
 				9CF96E7F2234A3D500CB84B4 /* USBClientManager.m */,
 				9CF96E382234A30200CB84B4 /* AppDelegate.h */,
 				9CF96E392234A30200CB84B4 /* AppDelegate.m */,
-				9CF96E3B2234A30200CB84B4 /* ViewController.h */,
-				9CF96E3C2234A30200CB84B4 /* ViewController.m */,
 				9CF96E3E2234A30200CB84B4 /* Assets.xcassets */,
 				9CF96E402234A30200CB84B4 /* Main.storyboard */,
 				9CF96E432234A30200CB84B4 /* Info.plist */,
@@ -937,7 +925,6 @@
 			files = (
 				9CF96E002234A0BB00CB84B4 /* SocketRelayServer.m in Sources */,
 				9CF96E012234A0BB00CB84B4 /* USBRelayServer.m in Sources */,
-				9CF96DDA22349F0B00CB84B4 /* Relay.m in Sources */,
 				9CF96DFF2234A0BB00CB84B4 /* RelayConnectionManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -956,7 +943,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CF96E3D2234A30200CB84B4 /* ViewController.m in Sources */,
 				9CF96E872234A3D600CB84B4 /* USBClientManager.m in Sources */,
 				9CF96E882234A3D600CB84B4 /* RelayUSBClient.m in Sources */,
 				9CF96E452234A30200CB84B4 /* main.m in Sources */,
