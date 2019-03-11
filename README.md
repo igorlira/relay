@@ -28,7 +28,7 @@ _If you'd rather install manually, check [ExampleRelayClient](https://github.com
 Relay is available on CocoaPods. Add the following line on your Podfile:
 
 ```ruby
-pod 'RelayClient'
+pod 'RelayClient', '0.0.1-alpha1'
 ```
 
 After running `pod install`, Add the following lines to your AppDelegate.m:
