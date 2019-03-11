@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "RelayClient"
-  s.version      = "0.0.1-alpha"
+  s.version      = "0.0.1-alpha1"
   s.summary      = "A tool to relay iOS sockets over a USB tunnel."
 
   # This description is used to generate tags and improve search results.
@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/igorlira/relay.git", :branch => "#{s.version}" }
+  s.source       = { :git => "https://github.com/igorlira/relay.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
